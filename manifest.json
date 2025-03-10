@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Shill-O-Tron 3000: Reddit Shill Zapper",
+  "short_name": "Shill-O-Tron 3000",
+  "version": "1.0.0",
+  "description": "Zap shillers on Reddit! Flags sneaky promoters, dims their posts, and reports: 'Zapped X from Y Redditors! 🎉'",
+  "author": "Lucio Amorim",
+  "homepage_url": "https://github.com/lucioamor/shill-o-tron-3000",  
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "identity",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.reddit.com/*",
+    "https://oauth.reddit.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/r/*/comments/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

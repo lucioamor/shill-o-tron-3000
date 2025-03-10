@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shill-O-Tron 3000 - Permissions Explained</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Comic Sans MS', Arial, sans-serif;
+      background-color: #2ecc71;
+      color: #ffffff;
+      line-height: 1.5;
+      margin: 0;
+    }
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    li {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ecf0f1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shill-O-Tron 3000 - Permissions Explained</h1>
+  <ul>
+    <li><strong>activeTab</strong>: Allows the extension to analyze the Reddit thread you’re currently viewing to detect potential shill activity.</li>
+    <li><strong>identity</strong>: Enables secure Reddit OAuth authentication, allowing the extension to fetch your comment history with your consent for shill detection.</li>
+    <li><strong>storage</strong>: Permits the extension to store your Reddit access token locally in Chrome’s storage, ensuring seamless API access without repeated logins.</li>
+    <li><strong>Host permissions (https://www.reddit.com/*, https://oauth.reddit.com/*)</strong>: Required to access Reddit’s API, used solely to retrieve public comment data for analyzing link patterns. No personal data is shared or stored beyond this purpose.</li>
+  </ul>
+  <p>For more details, see the <a href="about.html" target="_blank">Legal Disclaimer</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>. This extension complies with Chrome Web Store and Reddit policies, using permissions only for its experimental, good-faith purpose.</p>
+</body>
+</html>
